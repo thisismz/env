@@ -27,11 +27,7 @@ func getOsEnv(key, fallback string) string {
 
 func SetupEnvFile() {
 	envFile := ".env"
-	var err error
-	env, err = godotenv.Read(envFile)
-	if err != nil {
-		log.Default().Printf("Error loading %s file", envFile)
-	}
+	env, _ = godotenv.Read(envFile)
 }
 
 func IsDevelopment() bool {
