@@ -46,7 +46,7 @@ func setupEnvFile() {
 	envFile := ".env"
 	fileEnv, err := godotenv.Read(envFile)
 	if err != nil {
-		log.Printf("Warning: could not read env file %s: %v\n", envFile, err)
+		log.Printf("Warning: could not read env file : %s error: %v\n", envFile, err)
 		return
 	}
 	env = fileEnv
